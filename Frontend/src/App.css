@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Use full viewport height */
+}
+
+.chat-container {
+  width: 500px;
+  flex-grow: 1; /* Allow the chat container to grow and take available space */
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  padding: 20px;
+  /* background-color: #f4f4f4; */
+  
+}
+.chat-container img.Clogo {
+  height: 100px;
+  width: 100px;
+  margin-left: 40%;
+  margin-bottom: 10px;
+  border-radius: 50%;
+   /* Set the logo height */
+  margin-right: 10px; /* Space between logo and input box */
+}
+.chat-log {
+  height:500px
+  ; /* Allow chat log to grow and fill space */
+  overflow-y:auto; /* Enable scrolling if content exceeds view */
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  /* background-color: #fff; */
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+}
+
+.chat-message {
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.chat-message.user {
+  text-align: right;
+  background-color: #0084ff;
+  color: white;
+  border-radius: 10px;
+}
+
+.chat-message.bot {
+  text-align: left;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+
+.chat-input {
+  display: flex;
+  justify-content: space-between;
+}
+.chat-input img.logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%; 
+  margin-right: 10px;
+}
+.chat-input input {
+  flex-grow: 1; /* Allow input box to fill available space */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
