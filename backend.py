@@ -10,7 +10,15 @@ from keras.models import load_model
 from nltk.stem.lancaster import LancasterStemmer
 
 # Download NLTK resources
-nltk.download('punkt')
+try:
+    nltk.data.find("tokenizers/punkt")
+except LookupError:
+    nltk.download("punkt")
+
+try:
+    nltk.data.find("tokenizers/punkt_tab")
+except LookupError:
+    nltk.download("punkt_tab")
 
 # Initialize stemmer and FastAPI app
 stemmer = LancasterStemmer()
