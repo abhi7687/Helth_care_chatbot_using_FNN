@@ -28,7 +28,7 @@ function App() {
     setChatLog((prevLog) => [...prevLog, { sender: 'You', text: userMessage }]);
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/chatbot/', { message: userMessage });
+      const response = await axios.post('https://helth-care-chatbot-using-fnn.onrender.com/chatbot/', { message: userMessage });
       setChatLog((prevLog) => [...prevLog, { sender: 'Bot', text: response.data.response }]);
     } catch (error) {
       setChatLog((prevLog) => [...prevLog, { sender: 'Bot', text: 'Error communicating with FastAPI.' }]);
