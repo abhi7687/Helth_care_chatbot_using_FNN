@@ -298,12 +298,6 @@ To add a new disease/symptom: add a new intent object with a unique `tag`, examp
 
 ---
 
-## 🏆 Achievement
-
-**1st Place** — IISC Bangalore Hackathon (Techgyan, June 2025) — among 15 competing teams.
-
----
-
 ## 👨‍💻 Author
 
 **Vaitla Abhiram**  
